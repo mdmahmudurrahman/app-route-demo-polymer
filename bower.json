@@ -3,10 +3,16 @@
   "description": "Experimenting route",
   "main": "index.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^2.0.0"
+    "polymer": "Polymer/polymer#^2.0.0",
+    "app-route": "PolymerElements/app-route#^2.0.0",
+    "iron-selector": "^2.0.0"
   },
   "devDependencies": {
     "web-component-tester": "Polymer/web-component-tester#^6.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  },
+  "resolutions": {
+    "webcomponentsjs": "^1.0.0",
+    "polymer": "^2.0.0"
   }
 }

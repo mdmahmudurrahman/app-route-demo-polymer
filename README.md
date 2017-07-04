@@ -9,7 +9,7 @@ First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polyme
 ## Viewing Your Application
 
 ```
-$ polymer serve
+$ polymer serve --open
 ```
 
 ## Building Your Application
@@ -31,3 +31,22 @@ $ polymer test
 ```
 
 Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+
+
+#### Add the app-route element(it will add dependent app-location)
+#### Add iron-selector element
+
+```
+<link rel="import" href="../../bower_components/app-route/app-location.html">
+<link rel="import" href="../../bower_components/app-route/app-route.html">
+<link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
+
+```
+
+#### Install them using bower
+
+```
+  a. bower install --save app-route
+  b. bower install --save iron-selector
+
+```

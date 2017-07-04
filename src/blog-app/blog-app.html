@@ -1,4 +1,8 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/app-route/app-location.html">
+<link rel="import" href="../../bower_components/app-route/app-route.html">
+<link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="blog-pages.html">
 
 <dom-module id="blog-app">
   <template>
@@ -8,8 +12,23 @@
       }
     </style>
     <h2>Hello [[prop1]]!</h2>
+   <app-location route="{{route}}"></app-location>
+   <app-route route="{{route}}" 
+     pattern="/:category" 
+     data="{{categoryData}}" 
+     tail="{{categoryTail}}">
+   </app-route>
+  <nav>
+    <iron-selector selected="{{categoryData.category}}" 
+      attr-for-selected="data-page">
+      <a data-page="art" href="art">Art</a>
+      <a data-page="photo" href="photo">Photo</a>
+      <a data-page="film" href="film">Film</a>
+      <a data-page="contact" href="contact">Contact</a>
+    </iron-selector>
+  </nav>
+  
   </template>
-
   <script>
     /**
      * @customElement
