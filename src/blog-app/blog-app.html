@@ -27,15 +27,22 @@
       <a data-page="contact" href="contact">Contact</a>
     </iron-selector>
   </nav>
+  <main>
+    <blog-pages category="{{categoryData.category}}"></blog-pages>
+    </main>
   
   </template>
   <script>
-    /**
-     * @customElement
-     * @polymer
-     */
     class BlogApp extends Polymer.Element {
       static get is() { return 'blog-app'; }
+      // connectedCallback() {
+      //   super.connectedCallback();
+      //   console.log("test");
+      //   if (!this.route.path) {
+      //     this.set('route.path', '/art');
+      //   }
+      // }
+
       static get properties() {
         return {
           prop1: {
@@ -47,5 +54,31 @@
     }
 
     window.customElements.define(BlogApp.is, BlogApp);
+
+    //  /**
+    //  * @customElement
+    //  * @polymer
+    //  */
+    // Polymer({
+    //   is: 'blog-app',
+    //   // observers: [
+    //   //   '_updateScroll(route, categoryData, categoryTail)'
+    //   // ],
+
+    //   attached: function() {
+    //     if (!this.route.path) {
+    //       this.set('route.path', '/art/list');
+    //     }
+    //   }
+
+    //   // _updateScroll: function(route, categoryData, categoryTail) {
+    //   //   console.log("route: "+JSON.stringify(route)
+    //   //     +"\n"+"categoryData: " +JSON.stringify(categoryData)
+    //   //     +"\n"+" categoryData.category: " +JSON.stringify(categoryData.category)
+    //   //     +"\n"+" categoryTail: " +JSON.stringify(categoryTail));
+
+    //   //   window.scroll(0, 0);
+    //   // }
+    // });
   </script>
 </dom-module>
