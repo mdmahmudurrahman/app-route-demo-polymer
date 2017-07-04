@@ -1,0 +1,7 @@
+{
+  "name": "blog",
+  "short_name": "blog",
+  "description": "Experimenting route",
+  "start_url": "/",
+  "display": "standalone"
+}
